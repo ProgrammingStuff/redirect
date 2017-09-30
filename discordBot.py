@@ -8,6 +8,7 @@ prefix = values["prefix"]
 async def on_message(message):
     if message.author ==  client.user:
         return
+    strippedMesssage = message.content.lower().split(prefix)[1]
     if message.content.startswith(prefix + 'status'):
         status = api_status()
         result = "----------------------------------------\n"
@@ -47,12 +48,9 @@ async def on_message(message):
             laps = laps + 1
         await client.send_message(message.channel, result)
          
-    elif message.content == prefix + "help":
-        await client.send_message(message.channel, responses["help"])
-      
-    elif message.content.lower() == "yeet":
-        await client.send_message(message.channel, responses["yeet"])
-     
+    elif strippedMessage in responses:
+        await client.send_message(message.channel, responses(srippedMessage))
+                                  
 @client.event
 async def on_ready():
     await client.change_presence(game=discord.Game(name= "Try " + prefix + "help || GLHF!"))
