@@ -50,7 +50,7 @@ async def on_message(message):
     elif message.content == prefix + "help":
         await client.send_message(message.channel, responses["help"])
       
-    elif message.content == "yeet":
+    elif message.content.lower() == "yeet":
         await client.send_message(message.channel, responses["yeet"])
      
 @client.event
