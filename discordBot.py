@@ -47,8 +47,11 @@ async def on_message(message):
             laps = laps + 1
         await client.send_message(message.channel, result)
          
-    if message.content == prefix + "help":
+    elif message.content == prefix + "help":
         await client.send_message(message.channel, responses["help"])
+      
+    elif message.content == "yeet":
+        await client.send_message(message.channel, responses["yeet"])
      
 @client.event
 async def on_ready():
