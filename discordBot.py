@@ -8,7 +8,7 @@ prefix = values["prefix"]
 async def on_message(message):
     if message.author ==  client.user:
         return
-    strippedMesssage = message.content.lower().split(prefix)[1]
+    strippedMessage = message.content.lower().split(prefix)[1]
     if message.content.startswith(prefix + 'status'):
         status = api_status()
         result = "----------------------------------------\n"
