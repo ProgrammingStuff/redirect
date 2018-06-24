@@ -45,7 +45,7 @@ async def on_message(message):
         await client.send_message(message.channel, result)
          
     elif strippedMessage in responses:
-        await client.send_message(message.channel, responses(strippedMessage))
+        await client.send_message(message.channel, responses[strippedMessage])
                                   
 @client.event
 async def on_ready():
