@@ -13,7 +13,7 @@ async def on_message(message):
         status = api_status()
         result = "----------------------------------------\n"
         laps = 0
-        while laps < 10:
+        while laps < len(status):
             state = status[laps][1]
             if state == "green":
                 state = ":white_check_mark:"
@@ -29,16 +29,12 @@ async def on_message(message):
             elif laps == 2:
                 service = "Mojang accounts website:   "
             elif laps == 3:
-                service = "Authentication service: "
-            elif laps == 4:
-                service = "Minecraft skins: "
-            elif laps == 5:
                 service = "Authentication server: "
-            elif laps == 6:
+            elif laps == 4:
                 service = "Sessions server: "
-            elif laps == 7:
+            elif laps == 5:
                 service = "Public API: "
-            elif laps == 8:
+            elif laps == 6:
                 service = "Minecraft textures: "
             else:
                 service = "Mojang website: "
