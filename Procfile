@@ -1,1 +1,1 @@
-worker: nodejs redirect.js
+worker: python redirect.py
