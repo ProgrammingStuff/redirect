@@ -1,1 +1,1 @@
-worker: javascript redirect.js
+worker: nodejs redirect.js
