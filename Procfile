@@ -1,1 +1,1 @@
-worker: python discordBot.py
+worker: javascript redirect.js
